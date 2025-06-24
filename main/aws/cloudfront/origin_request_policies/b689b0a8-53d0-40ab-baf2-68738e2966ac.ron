@@ -1,0 +1,7 @@
+OriginRequestPolicy(
+    name: "Managed-AllViewerExceptHostHeader",
+    comment: "Policy to forward all parameters in viewer requests except for the Host header",
+    cookies_config: None,
+    headers_config: None,
+    query_strings_config: None,
+)

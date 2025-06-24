@@ -1,0 +1,8 @@
+CachePolicy(
+    name: "UseOriginCacheControlHeaders-QueryStrings",
+    comment: "Policy for origins that return Cache-Control headers and serve different content based on values present in the query string.",
+    default_ttl: 0,
+    max_ttl: 31536000,
+    min_ttl: 0,
+    parameters_in_cache_key_and_forwarded_to_origin: None,
+)

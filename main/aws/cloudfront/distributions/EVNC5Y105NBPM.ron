@@ -1,0 +1,31 @@
+Distribution(
+    domain_name: "4ec656fc-b0f7-4fd7-8aa2-ec0956b4f0b0",
+    enabled: true,
+    default_root_object: "index.html",
+    origins: [
+        Origin(
+            id: "neftu.be.s3.eu-west-2.amazonaws.com",
+            domain_name: "neftu.be.s3.eu-west-2.amazonaws.com",
+            origin_path: "",
+            custom_origin_config: None,
+            s3_origin_config: None,
+        ),
+    ],
+    default_cache_behavior: CacheBehavior(
+        path_pattern: None,
+        target_origin_id: "neftu.be.s3.eu-west-2.amazonaws.com",
+        viewer_protocol_policy: "redirect-to-https",
+        allowed_methods: [],
+        cached_methods: [],
+        compress: true,
+        ttl_settings: TtlSettings(
+            default_ttl: None,
+            max_ttl: None,
+            min_ttl: 0,
+        ),
+    ),
+    cache_behaviors: [],
+    comment: "",
+    price_class: "PriceClass_100",
+    tags: {},
+)

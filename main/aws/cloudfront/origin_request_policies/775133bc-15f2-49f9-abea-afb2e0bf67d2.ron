@@ -1,0 +1,7 @@
+OriginRequestPolicy(
+    name: "Managed-Elemental-MediaTailor-PersonalizedManifests",
+    comment: "Policy for Elemental MediaTailor Origin",
+    cookies_config: None,
+    headers_config: None,
+    query_strings_config: None,
+)

@@ -1,0 +1,7 @@
+ResponseHeadersPolicy(
+    name: "Managed-SecurityHeadersPolicy",
+    comment: "Adds a set of security headers to every response",
+    cors_config: None,
+    custom_headers_config: None,
+    security_headers_config: None,
+)

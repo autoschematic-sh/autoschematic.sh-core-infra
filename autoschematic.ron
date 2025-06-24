@@ -1,0 +1,41 @@
+AutoschematicConfig(
+    prefixes: {
+        "main": Prefix(
+            connectors: [
+                Connector(
+                    shortname: "aws/iam",
+                    spec: CargoLocal(
+                        path: "../connector-dev/autoschematic-connector-aws/iam"
+                    )
+                ),
+                Connector(
+                    shortname: "aws/s3",
+                    spec: CargoLocal(
+                        path: "../connector-dev/autoschematic-connector-aws/s3"
+                    )
+                ),
+                Connector(
+                    shortname: "aws/cloudfront",
+                    spec: CargoLocal(
+                        path: "../connector-dev/autoschematic-connector-aws/cloudfront",
+                    ),
+                    env: {
+                        "RUST_LOG": "INFO"
+                    }
+                ),
+                Connector(
+                    shortname: "aws/cloudwatch",
+                    spec: CargoLocal(
+                        path: "../connector-dev/autoschematic-connector-aws/cloudwatch"
+                    )
+                ),
+                Connector(
+                    shortname: "aws/apigatewayv2",
+                    spec: CargoLocal(
+                        path: "../connector-dev/autoschematic-connector-aws/apigatewayv2"
+                    )
+                )
+            ]
+        )
+    },
+)

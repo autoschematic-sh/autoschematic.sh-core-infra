@@ -1,0 +1,31 @@
+Distribution(
+    domain_name: "1610453676669",
+    enabled: true,
+    default_root_object: "index.html",
+    origins: [
+        Origin(
+            id: "S3-hanzipalace.com",
+            domain_name: "hanzipalace.com.s3.amazonaws.com",
+            origin_path: "",
+            custom_origin_config: None,
+            s3_origin_config: None,
+        ),
+    ],
+    default_cache_behavior: CacheBehavior(
+        path_pattern: None,
+        target_origin_id: "S3-hanzipalace.com",
+        viewer_protocol_policy: "redirect-to-https",
+        allowed_methods: [],
+        cached_methods: [],
+        compress: false,
+        ttl_settings: TtlSettings(
+            default_ttl: None,
+            max_ttl: None,
+            min_ttl: 0,
+        ),
+    ),
+    cache_behaviors: [],
+    comment: "",
+    price_class: "PriceClass_100",
+    tags: {},
+)
