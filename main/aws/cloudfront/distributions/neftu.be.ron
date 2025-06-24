@@ -1,5 +1,5 @@
 Distribution(
-    domain_name: "4ec656fc-b0f7-4fd7-8aa2-ec0956b4f0b0",
+    domain_name: "d22q3svfovrgsa.cloudfront.net",
     enabled: true,
     default_root_object: "index.html",
     origins: [
@@ -8,15 +8,24 @@ Distribution(
             domain_name: "neftu.be.s3.eu-west-2.amazonaws.com",
             origin_path: "",
             custom_origin_config: None,
-            s3_origin_config: None,
+            s3_origin_config: S3OriginConfig(
+                origin_access_identity: "",
+            ),
         ),
     ],
     default_cache_behavior: CacheBehavior(
         path_pattern: None,
         target_origin_id: "neftu.be.s3.eu-west-2.amazonaws.com",
         viewer_protocol_policy: "redirect-to-https",
-        allowed_methods: [],
-        cached_methods: [],
+        allowed_methods: [
+            "HEAD",
+            "GET",
+            "OPTIONS",
+        ],
+        cached_methods: [
+            "HEAD",
+            "GET",
+        ],
         compress: true,
         ttl_settings: TtlSettings(
             default_ttl: None,
