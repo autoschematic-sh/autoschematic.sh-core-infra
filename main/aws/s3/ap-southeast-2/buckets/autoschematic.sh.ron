@@ -1,0 +1,5 @@
+S3Bucket(
+    policy: None,
+    public_access_block: None,
+    tags: {"fuck": "ass"},
+)
