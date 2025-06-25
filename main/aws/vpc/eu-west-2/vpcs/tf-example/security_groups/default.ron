@@ -1,0 +1,44 @@
+SecurityGroup(
+    description: "launch-wizard-1 created 2022-05-18T23:19:54.897Z",
+    ingress_rules: [
+        SecurityGroupRule(
+            protocol: "tcp",
+            from_port: 80,
+            to_port: 80,
+            cidr_blocks: [
+                "0.0.0.0/0",
+            ],
+            security_group_ids: [],
+        ),
+        SecurityGroupRule(
+            protocol: "tcp",
+            from_port: 22,
+            to_port: 22,
+            cidr_blocks: [
+                "51.6.99.226/32",
+            ],
+            security_group_ids: [],
+        ),
+        SecurityGroupRule(
+            protocol: "tcp",
+            from_port: 443,
+            to_port: 443,
+            cidr_blocks: [
+                "0.0.0.0/0",
+            ],
+            security_group_ids: [],
+        ),
+    ],
+    egress_rules: [
+        SecurityGroupRule(
+            protocol: "-1",
+            from_port: None,
+            to_port: None,
+            cidr_blocks: [
+                "0.0.0.0/0",
+            ],
+            security_group_ids: [],
+        ),
+    ],
+    tags: {},
+)

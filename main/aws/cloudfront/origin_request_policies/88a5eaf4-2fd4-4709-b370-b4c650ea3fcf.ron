@@ -1,7 +1,0 @@
-OriginRequestPolicy(
-    name: "Managed-CORS-S3Origin",
-    comment: "Policy for S3 origin with CORS",
-    cookies_config: None,
-    headers_config: None,
-    query_strings_config: None,
-)

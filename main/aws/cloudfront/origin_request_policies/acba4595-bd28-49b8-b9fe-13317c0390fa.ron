@@ -1,7 +1,0 @@
-OriginRequestPolicy(
-    name: "Managed-UserAgentRefererHeaders",
-    comment: "Policy to forward user-agent and referer headers to origin",
-    cookies_config: None,
-    headers_config: None,
-    query_strings_config: None,
-)

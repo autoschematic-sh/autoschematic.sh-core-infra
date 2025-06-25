@@ -1,8 +1,0 @@
-CachePolicy(
-    name: "Managed-Amplify-Default-V2",
-    comment: "Default Amplify cache policy",
-    default_ttl: 0,
-    max_ttl: 31536000,
-    min_ttl: 0,
-    parameters_in_cache_key_and_forwarded_to_origin: None,
-)

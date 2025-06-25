@@ -1,0 +1,15 @@
+RouteTable(
+    routes: [
+        Route(
+            destination_cidr_block: "172.31.0.0/16",
+            destination_ipv6_cidr_block: None,
+            gateway_id: "local",
+            instance_id: None,
+            nat_gateway_id: None,
+        ),
+    ],
+    associations: [
+        "rtbassoc-0016e0de2e48e8ad3",
+    ],
+    tags: {},
+)

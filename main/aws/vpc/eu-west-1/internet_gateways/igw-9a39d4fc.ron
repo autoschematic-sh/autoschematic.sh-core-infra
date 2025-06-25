@@ -1,0 +1,4 @@
+InternetGateway(
+    vpc_id: None,
+    tags: {},
+)

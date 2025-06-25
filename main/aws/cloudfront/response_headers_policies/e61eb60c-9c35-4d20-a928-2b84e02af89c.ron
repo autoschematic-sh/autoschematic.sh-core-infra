@@ -1,7 +1,0 @@
-ResponseHeadersPolicy(
-    name: "Managed-CORS-and-SecurityHeadersPolicy",
-    comment: "Allows all origins for simple CORS requests, and adds security headers",
-    cors_config: None,
-    custom_headers_config: None,
-    security_headers_config: None,
-)

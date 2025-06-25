@@ -1,0 +1,26 @@
+SecurityGroup(
+    description: "default VPC security group",
+    ingress_rules: [
+        SecurityGroupRule(
+            protocol: "-1",
+            from_port: None,
+            to_port: None,
+            cidr_blocks: [],
+            security_group_ids: [
+                "sg-0aa6628503103695d",
+            ],
+        ),
+    ],
+    egress_rules: [
+        SecurityGroupRule(
+            protocol: "-1",
+            from_port: None,
+            to_port: None,
+            cidr_blocks: [
+                "0.0.0.0/0",
+            ],
+            security_group_ids: [],
+        ),
+    ],
+    tags: {},
+)

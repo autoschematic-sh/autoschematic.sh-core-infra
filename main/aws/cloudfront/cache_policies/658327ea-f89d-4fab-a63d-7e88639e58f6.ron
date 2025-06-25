@@ -1,8 +1,0 @@
-CachePolicy(
-    name: "Managed-CachingOptimized",
-    comment: "Policy with caching enabled. Supports Gzip and Brotli compression.",
-    default_ttl: 86400,
-    max_ttl: 31536000,
-    min_ttl: 1,
-    parameters_in_cache_key_and_forwarded_to_origin: None,
-)

@@ -1,0 +1,6 @@
+Subnet(
+    cidr_block: "172.31.16.0/20",
+    availability_zone: "eu-west-1c",
+    map_public_ip_on_launch: true,
+    tags: {},
+)

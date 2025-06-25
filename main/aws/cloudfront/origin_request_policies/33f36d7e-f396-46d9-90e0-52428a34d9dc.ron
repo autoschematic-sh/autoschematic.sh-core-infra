@@ -1,7 +1,0 @@
-OriginRequestPolicy(
-    name: "Managed-AllViewerAndCloudFrontHeaders-2022-06",
-    comment: "Policy to forward all parameters in viewer requests and all CloudFront headers as of June 2022",
-    cookies_config: None,
-    headers_config: None,
-    query_strings_config: None,
-)

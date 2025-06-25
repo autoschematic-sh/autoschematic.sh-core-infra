@@ -9,6 +9,12 @@ AutoschematicConfig(
                     )
                 ),
                 Connector(
+                    shortname: "aws/vpc",
+                    spec: CargoLocal(
+                        path: "../connector-dev/autoschematic-connector-aws/vpc"
+                    )
+                ),
+                Connector(
                     shortname: "aws/s3",
                     spec: CargoLocal(
                         path: "../connector-dev/autoschematic-connector-aws/s3"
