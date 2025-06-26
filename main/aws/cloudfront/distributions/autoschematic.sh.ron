@@ -1,0 +1,39 @@
+Distribution(
+    enabled: true,
+    default_root_object: "index.html",
+    origins: [
+        Origin(
+            id: "S3-autoschematic.sh",
+            domain_name: "autoschematic.sh.s3.amazonaws.com",
+            origin_path: "",
+            custom_origin_config: None,
+            s3_origin_config: S3OriginConfig(
+                origin_access_identity: "",
+            ),
+        )
+    ],
+    default_cache_behavior: CacheBehavior(
+        id: "658327ea-f89d-4fab-a63d-7e88639e58f6",
+        path_pattern: None,
+        target_origin_id: "S3-autoschematic.sh",
+        viewer_protocol_policy: "redirect-to-https",
+        allowed_methods: [
+            "GET",
+            "HEAD",
+        ],
+        cached_methods: [
+            "GET",
+            "HEAD",
+        ],
+        compress: true,
+        ttl_settings: TtlSettings(
+            default_ttl: 86400,
+            max_ttl: 31536000,
+            min_ttl: None,
+        ),
+    ),
+    cache_behaviors: [],
+    comment: "[comment]",
+    price_class: "PriceClass_All",
+    tags: {},
+)
