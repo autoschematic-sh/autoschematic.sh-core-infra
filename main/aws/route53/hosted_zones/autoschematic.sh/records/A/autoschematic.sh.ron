@@ -1,0 +1,9 @@
+RecordSet(
+    ttl: None,
+    alias_target: AliasTarget(
+        dns_name: "d3nniz7m33nuje.cloudfront.net",
+        hosted_zone_id: "Z2FDTNDATAQYW2",
+        evaluate_target_health: false
+    ),
+    resource_records: None
+)
