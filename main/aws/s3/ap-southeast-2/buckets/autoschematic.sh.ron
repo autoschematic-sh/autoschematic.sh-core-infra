@@ -1,6 +1,27 @@
 S3Bucket(
-    policy: None,
-    public_access_block: None,
+    policy: {
+        "Version": "2012-10-17",
+        "Statement": {
+            "Sid": "AllowCloudFrontServicePrincipalReadOnly",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "cloudfront.amazonaws.com"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::autoschematic.sh/*",
+            "Condition": {
+                "StringEquals": {
+                    "AWS:SourceArn": "arn:aws:cloudfront::467992565187:distribution/E2YK23069K7O4B"
+                }
+            }
+        }
+    },
+    public_access_block: PublicAccessBlock(
+        block_public_acls: true,
+        ignore_public_acls: true,
+        block_public_policy: true,
+        restrict_public_buckets: true,
+    ),
     acl: Acl(
         owner_id: "f802d8d1412f2c17cb689dcaa5b11c3f7545c31e3e692b7e637bc4bd195c0005",
         grants: [
