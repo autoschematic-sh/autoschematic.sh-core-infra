@@ -1,0 +1,52 @@
+S3Bucket(
+    policy: {
+        "Statement": [
+            {
+                "Action": "s3:GetBucketAcl",
+                "Condition": {
+                    "StringEquals": {
+                        "AWS:SourceArn": "arn:aws:cloudtrail:us-east-1:467992565187:trail/route53-agony",
+                    },
+                },
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "cloudtrail.amazonaws.com",
+                },
+                "Resource": "arn:aws:s3:::aws-cloudtrail-logs-467992565187-f507039e",
+                "Sid": "AWSCloudTrailAclCheck20150319-9af17452-4c38-42d5-ab97-39691201f262",
+            },
+            {
+                "Action": "s3:PutObject",
+                "Condition": {
+                    "StringEquals": {
+                        "AWS:SourceArn": "arn:aws:cloudtrail:us-east-1:467992565187:trail/route53-agony",
+                        "s3:x-amz-acl": "bucket-owner-full-control",
+                    },
+                },
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "cloudtrail.amazonaws.com",
+                },
+                "Resource": "arn:aws:s3:::aws-cloudtrail-logs-467992565187-f507039e/AWSLogs/467992565187/*",
+                "Sid": "AWSCloudTrailWrite20150319-f97beeb9-140c-4c39-b87c-12cf9a913183",
+            },
+        ],
+        "Version": "2012-10-17",
+    },
+    public_access_block: PublicAccessBlock(
+        block_public_acls: true,
+        ignore_public_acls: true,
+        block_public_policy: true,
+        restrict_public_buckets: true,
+    ),
+    acl: Acl(
+        owner_id: "f802d8d1412f2c17cb689dcaa5b11c3f7545c31e3e692b7e637bc4bd195c0005",
+        grants: [
+            Grant(
+                grantee_id: "f802d8d1412f2c17cb689dcaa5b11c3f7545c31e3e692b7e637bc4bd195c0005",
+                permission: "FULL_CONTROL",
+            ),
+        ],
+    ),
+    tags: {},
+)

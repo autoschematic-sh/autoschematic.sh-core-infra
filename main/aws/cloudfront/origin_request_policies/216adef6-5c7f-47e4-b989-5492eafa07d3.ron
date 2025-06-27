@@ -1,0 +1,7 @@
+OriginRequestPolicy(
+    name: "Managed-AllViewer",
+    comment: "Policy to forward all parameters in viewer requests",
+    cookies_config: None,
+    headers_config: None,
+    query_strings_config: None,
+)

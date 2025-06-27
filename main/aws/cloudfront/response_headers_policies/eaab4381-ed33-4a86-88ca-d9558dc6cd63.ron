@@ -1,0 +1,7 @@
+ResponseHeadersPolicy(
+    name: "Managed-CORS-with-preflight-and-SecurityHeadersPolicy",
+    comment: "Allows all origins for CORS requests, including preflight requests, and adds security headers",
+    cors_config: None,
+    custom_headers_config: None,
+    security_headers_config: None,
+)
