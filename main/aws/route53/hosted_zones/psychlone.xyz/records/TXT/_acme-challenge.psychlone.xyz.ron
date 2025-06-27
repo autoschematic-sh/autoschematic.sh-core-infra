@@ -1,0 +1,7 @@
+RecordSet(
+    ttl: 300,
+    alias_target: None,
+    resource_records: [
+        "\"2g_CjbgPuBpXpt1SMuYiwtGX6kDmVl-9CRR5waG03QA\"",
+    ],
+)

@@ -1,0 +1,8 @@
+RecordSet(
+    ttl: 300,
+    alias_target: None,
+    resource_records: [
+        "\"IqlkGaF8rS2XsWvXM4rpBl51neAyXIyZ4cvRVMEKrLM\"",
+        "\"VmX13zPqvZuL9WTKAACLl-PsMefu3_SGuWe5Ug_COes\"",
+    ],
+)

@@ -1,0 +1,10 @@
+RecordSet(
+    ttl: 172800,
+    alias_target: None,
+    resource_records: [
+        "ns-227.awsdns-28.com.",
+        "ns-640.awsdns-16.net.",
+        "ns-1407.awsdns-47.org.",
+        "ns-1719.awsdns-22.co.uk.",
+    ],
+)

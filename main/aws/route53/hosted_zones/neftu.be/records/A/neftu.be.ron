@@ -1,0 +1,7 @@
+RecordSet(
+    ttl: 300,
+    alias_target: None,
+    resource_records: [
+        "65.109.163.210",
+    ],
+)

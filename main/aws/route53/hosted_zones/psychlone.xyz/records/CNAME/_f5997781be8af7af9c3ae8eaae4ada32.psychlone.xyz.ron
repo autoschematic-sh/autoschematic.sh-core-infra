@@ -1,0 +1,7 @@
+RecordSet(
+    ttl: 300,
+    alias_target: None,
+    resource_records: [
+        "_4d44a35fad8942c71eb2b4bd207ef742.vtqfhvjlcp.acm-validations.aws.",
+    ],
+)

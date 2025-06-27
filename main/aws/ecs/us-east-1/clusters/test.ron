@@ -1,0 +1,22 @@
+Cluster(
+    status: "ACTIVE",
+    capacity_providers: [
+        "FARGATE",
+        "FARGATE_SPOT",
+    ],
+    default_capacity_provider_strategy: [
+        CapacityProviderStrategyItem(
+            capacity_provider: "FARGATE",
+            weight: 1,
+            base: 1,
+        ),
+        CapacityProviderStrategyItem(
+            capacity_provider: "FARGATE_SPOT",
+            weight: 4,
+            base: 0,
+        ),
+    ],
+    settings: [],
+    configuration: None,
+    tags: {},
+)

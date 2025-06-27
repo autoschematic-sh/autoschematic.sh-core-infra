@@ -1,0 +1,7 @@
+RecordSet(
+    ttl: 600,
+    alias_target: None,
+    resource_records: [
+        "10 inbound-smtp.us-west-2.amazonaws.com.",
+    ],
+)

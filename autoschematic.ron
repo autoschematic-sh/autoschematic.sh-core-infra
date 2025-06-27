@@ -21,6 +21,24 @@ AutoschematicConfig(
                     )
                 ),
                 Connector(
+                    shortname: "aws/ecs",
+                    spec: CargoLocal(
+                        path: "../connector-dev/autoschematic-connector-aws/ecs"
+                    )
+                ),
+                Connector(
+                    shortname: "aws/ecr",
+                    spec: CargoLocal(
+                        path: "../connector-dev/autoschematic-connector-aws/ecr"
+                    )
+                ),
+                Connector(
+                    shortname: "aws/route53",
+                    spec: CargoLocal(
+                        path: "../connector-dev/autoschematic-connector-aws/route53"
+                    )
+                ),
+                Connector(
                     shortname: "aws/cloudfront",
                     spec: CargoLocal(
                         path: "../connector-dev/autoschematic-connector-aws/cloudfront",

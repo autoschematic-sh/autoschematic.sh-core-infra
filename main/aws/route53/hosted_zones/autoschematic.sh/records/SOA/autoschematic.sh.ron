@@ -1,0 +1,7 @@
+RecordSet(
+    ttl: 900,
+    alias_target: None,
+    resource_records: [
+        "ns-1568.awsdns-04.co.uk. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400",
+    ],
+)

@@ -1,0 +1,7 @@
+RecordSet(
+    ttl: 1800,
+    alias_target: None,
+    resource_records: [
+        "yk3trs4za7xr4jn6zbxe4boq4ms6yr75.dkim.amazonses.com",
+    ],
+)

@@ -1,0 +1,4 @@
+PullThroughCacheRule(
+    upstream_registry_url: "registry-1.docker.io",
+    credential_arn: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecr-pullthroughcache/docker-hub-pat-3EfG5W",
+)
