@@ -1,0 +1,7 @@
+OriginAccessControl(
+    name: "autoschematic.sh",
+    description: "[description]",
+    origin_access_control_origin_type: "s3",
+    signing_behavior: "always",
+    signing_protocol: "sigv4",
+)
