@@ -33,7 +33,7 @@ Distribution(
         ),
     ),
     cache_behaviors: [],
-    comment: "[comment]",
+    comment: "",
     price_class: "PriceClass_All",
     tags: {},
 )
