@@ -4,13 +4,17 @@ Distribution(
     origins: [
         Origin(
             id: "S3-autoschematic.sh",
-            domain_name: "autoschematic.sh.s3.amazonaws.com",
+            domain_name: "autoschematic.sh.s3.ap-southeast-2.amazonaws.com",
             origin_path: "",
             custom_origin_config: None,
             s3_origin_config: S3OriginConfig(
                 origin_access_identity: "",
             ),
-        )
+            origin_access_control_id: "EVPUZJ3R2ADYI",
+        ),
+    ],
+    aliases: [
+        "autoschematic.sh"
     ],
     default_cache_behavior: CacheBehavior(
         id: "658327ea-f89d-4fab-a63d-7e88639e58f6",
@@ -18,22 +22,22 @@ Distribution(
         target_origin_id: "S3-autoschematic.sh",
         viewer_protocol_policy: "redirect-to-https",
         allowed_methods: [
-            "GET",
             "HEAD",
+            "GET",
         ],
         cached_methods: [
-            "GET",
             "HEAD",
+            "GET",
         ],
         compress: true,
         ttl_settings: TtlSettings(
-            default_ttl: 86400,
-            max_ttl: 31536000,
+            default_ttl: None,
+            max_ttl: None,
             min_ttl: None,
         ),
     ),
     cache_behaviors: [],
     comment: "",
-    price_class: "PriceClass_All",
+    price_class: "PriceClass_100",
     tags: {},
 )
