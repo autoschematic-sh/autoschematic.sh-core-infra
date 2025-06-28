@@ -1,0 +1,8 @@
+Vpc(
+    cidr_block: "10.32.0.0/16",
+    instance_tenancy: "default",
+    enable_dns_support: true,
+    dhcp_options_id: "dopt-f8d0ab83",
+    enable_dns_hostnames: false,
+    tags: {},
+)
