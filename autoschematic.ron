@@ -25,8 +25,9 @@ AutoschematicConfig(
                 ),
                 Connector(
                     shortname: "aws/ecs",
-                    spec: CargoLocal(
-                        path: "../connector-dev/autoschematic-connector-aws/ecs"
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-ecs",
+                        version: "0.5.0"
                     )
                 ),
                 Connector(
