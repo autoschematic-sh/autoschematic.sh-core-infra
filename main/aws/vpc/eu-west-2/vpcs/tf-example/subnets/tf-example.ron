@@ -1,8 +1,0 @@
-Subnet(
-    cidr_block: "172.16.10.0/24",
-    availability_zone: "eu-west-2a",
-    map_public_ip_on_launch: false,
-    tags: {
-        "Name": "tf-example",
-    },
-)

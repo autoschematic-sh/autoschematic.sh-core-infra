@@ -1,0 +1,24 @@
+IamRole(
+    attached_policies: [],
+    assume_role_policy_document: {
+        "Statement": [
+            {
+                "Action": "sts:AssumeRole",
+                "Condition": {
+                    "ArnLike": {
+                        "aws:SourceArn": "arn:aws:ecs:us-east-1:467992565187:*",
+                    },
+                    "StringEquals": {
+                        "aws:SourceAccount": "467992565187",
+                    },
+                },
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ecs-tasks.amazonaws.com",
+                },
+            },
+        ],
+        "Version": "2012-10-17",
+    },
+    tags: {},
+)

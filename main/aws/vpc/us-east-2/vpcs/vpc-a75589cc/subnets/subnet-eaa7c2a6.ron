@@ -1,6 +1,0 @@
-Subnet(
-    cidr_block: "172.31.32.0/20",
-    availability_zone: "us-east-2c",
-    map_public_ip_on_launch: true,
-    tags: {},
-)
