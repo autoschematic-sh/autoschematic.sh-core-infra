@@ -1,0 +1,4 @@
+OutputMap({
+    "service_name": "patio",
+    "arn": "arn:aws:ecs:us-east-1:467992565187:service/test/patio",
+})

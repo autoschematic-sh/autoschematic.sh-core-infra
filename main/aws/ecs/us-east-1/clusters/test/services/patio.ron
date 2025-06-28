@@ -1,5 +1,5 @@
 Service(
-    task_definition: "[task_definition_family]:[revision]",
+    task_definition: "backend_autoschematic_sh:1",
     desired_count: 1,
     launch_type: "FARGATE",
     capacity_provider_strategy: [],
@@ -16,11 +16,11 @@ Service(
     network_configuration: NetworkConfiguration(
         awsvpc_configuration: AwsVpcConfiguration(
             subnets: [
-                "subnet-0123456789abcdef0",
-                "subnet-0123456789abcdef1",
+                "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs/subnets/alpha.ron[subnet_id]",
+                "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs/subnets/beta.ron[subnet_id]",
             ],
             security_groups: [
-                "sg-0123456789abcdef0",
+                "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs/security_groups/default.ron[security_group_id]",
             ],
             assign_public_ip: "ENABLED",
         ),
@@ -28,12 +28,12 @@ Service(
     placement_constraints: [],
     placement_strategy: [],
     load_balancers: [
-        LoadBalancer(
-            target_group_arn: "arn:aws:elasticloadbalancing:[region]:[account_id]:targetgroup/[target-group-name]/[target-group-id]",
-            load_balancer_name: None,
-            container_name: "web",
-            container_port: 80,
-        ),
+        // LoadBalancer(
+        //     target_group_arn: "arn:aws:elasticloadbalancing:[region]:[account_id]:targetgroup/[target-group-name]/[target-group-id]",
+        //     load_balancer_name: None,
+        //     container_name: "web",
+        //     container_port: 80,
+        // ),
     ],
     service_registries: [],
     scheduling_strategy: "REPLICA",

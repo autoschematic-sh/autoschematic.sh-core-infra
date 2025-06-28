@@ -4,20 +4,23 @@ AutoschematicConfig(
             connectors: [
                 Connector(
                     shortname: "aws/iam",
-                    spec: CargoLocal(
-                        path: "../connector-dev/autoschematic-connector-aws/iam"
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-iam",
+                        version: "0.5.0"
                     )
                 ),
                 Connector(
                     shortname: "aws/vpc",
-                    spec: CargoLocal(
-                        path: "../connector-dev/autoschematic-connector-aws/vpc"
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-vpc",
+                        version: "0.5.0"
                     )
                 ),
                 Connector(
                     shortname: "aws/s3",
-                    spec: CargoLocal(
-                        path: "../connector-dev/autoschematic-connector-aws/s3"
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-s3",
+                        version: "0.5.0"
                     )
                 ),
                 Connector(
@@ -28,35 +31,39 @@ AutoschematicConfig(
                 ),
                 Connector(
                     shortname: "aws/ecr",
-                    spec: CargoLocal(
-                        path: "../connector-dev/autoschematic-connector-aws/ecr"
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-ecr",
+                        version: "0.5.0"
                     )
                 ),
                 Connector(
                     shortname: "aws/route53",
-                    spec: CargoLocal(
-                        path: "../connector-dev/autoschematic-connector-aws/route53"
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-route53",
+                        version: "0.5.0"
                     )
                 ),
                 Connector(
                     shortname: "aws/cloudfront",
-                    spec: CargoLocal(
-                        path: "../connector-dev/autoschematic-connector-aws/cloudfront",
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-cloudfront",
+                        version: "0.5.0"
                     ),
                     env: {
-                        "RUST_LOG": "INFO"
                     }
                 ),
                 Connector(
                     shortname: "aws/cloudwatch",
-                    spec: CargoLocal(
-                        path: "../connector-dev/autoschematic-connector-aws/cloudwatch"
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-cloudwatch",
+                        version: "0.5.0"
                     )
                 ),
                 Connector(
                     shortname: "aws/apigatewayv2",
-                    spec: CargoLocal(
-                        path: "../connector-dev/autoschematic-connector-aws/apigatewayv2"
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-apigatewayv2",
+                        version: "0.5.0"
                     )
                 )
             ]
