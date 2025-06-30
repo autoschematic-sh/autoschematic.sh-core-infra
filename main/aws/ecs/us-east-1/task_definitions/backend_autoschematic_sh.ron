@@ -31,7 +31,7 @@ TaskDefinition(
                 ),
                 KeyValuePair(
                     name: "SESSION_SECRET",
-                    value: "blank",
+                    value: "blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaank",
                 ),
             ],
             environment_files: [],
@@ -57,6 +57,12 @@ TaskDefinition(
             docker_labels: {},
             ulimits: [],
             log_configuration: None,
+            // log_configuration: LogConfiguration(
+            //     log_driver: "",
+            //     options: {
+            //     },
+            //     secret_options: []
+            // ),
             health_check: None,
             system_controls: [],
             resource_requirements: [],
