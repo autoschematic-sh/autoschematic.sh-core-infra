@@ -1,0 +1,46 @@
+Service(
+    task_definition: "arn:aws:ecs:us-east-1:467992565187:task-definition/backend_autoschematic_sh:1",
+    desired_count: 1,
+    launch_type: "FARGATE",
+    capacity_provider_strategy: [],
+    platform_version: "LATEST",
+    platform_family: None,
+    deployment_configuration: DeploymentConfiguration(
+        deployment_circuit_breaker: DeploymentCircuitBreaker(
+            enable: true,
+            rollback: true,
+        ),
+        maximum_percent: 200,
+        minimum_healthy_percent: 100,
+    ),
+    network_configuration: NetworkConfiguration(
+        awsvpc_configuration: AwsVpcConfiguration(
+            subnets: [
+                "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs/subnets/alpha.ron[subnet_id]",
+                "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs/subnets/beta.ron[subnet_id]",
+            ],
+            security_groups: [
+                "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs/security_groups/default.ron[security_group_id]",
+            ],
+            assign_public_ip: "ENABLED",
+        ),
+    ),
+    placement_constraints: [],
+    placement_strategy: [],
+    load_balancers: [
+        // LoadBalancer(
+        //     target_group_arn: "arn:aws:elasticloadbalancing:[region]:[account_id]:targetgroup/[target-group-name]/[target-group-id]",
+        //     load_balancer_name: None,
+        //     container_name: "web",
+        //     container_port: 80,
+        // ),
+    ],
+    service_registries: [],
+    scheduling_strategy: "REPLICA",
+    enable_ecs_managed_tags: true,
+    propagate_tags: "SERVICE",
+    enable_execute_command: true,
+    tags: {
+        
+    },
+)

@@ -7,6 +7,13 @@ RouteTable(
             instance_id: None,
             nat_gateway_id: None,
         ),
+        Route(
+            destination_cidr_block: "0.0.0.0/0",
+            destination_ipv6_cidr_block: None,
+            gateway_id: "out://aws/vpc/us-east-1/internet_gateways/autoschematic-ecs.ron[internet_gateway_id]",
+            instance_id: None,
+            nat_gateway_id: None,
+        ),
     ],
     associations: [
         "rtbassoc-0c83e7eb09e314139",
