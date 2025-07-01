@@ -1,5 +1,4 @@
 InternetGateway(
-    // vpc_id: "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs/autoschematic-ecs.ron[vpc_id]",
-    vpc_id: "poop",
+    vpc_id: None,
     tags: {},
 )

@@ -1,0 +1,19 @@
+TargetGroup(
+    name: "neftube",
+    protocol: "HTTP",
+    port: 8000,
+    vpc_id: "vpc-097ce74f2efd13143",
+    target_type: "instance",
+    health_check: HealthCheck(
+        enabled: true,
+        protocol: "HTTP",
+        port: "traffic-port",
+        path: "/",
+        interval_seconds: 30,
+        timeout_seconds: 5,
+        healthy_threshold_count: 5,
+        unhealthy_threshold_count: 2,
+    ),
+    targets: [],
+    tags: {},
+)

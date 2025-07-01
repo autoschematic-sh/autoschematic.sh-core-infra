@@ -1,0 +1,21 @@
+IamRole(
+    attached_policies: [
+        "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
+        "arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier",
+        "arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker",
+        "arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier",
+    ],
+    assume_role_policy_document: {
+        "Statement": [
+            {
+                "Action": "sts:AssumeRole",
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ec2.amazonaws.com",
+                },
+            },
+        ],
+        "Version": "2008-10-17",
+    },
+    tags: {},
+)

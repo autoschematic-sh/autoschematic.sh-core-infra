@@ -1,0 +1,20 @@
+IamRole(
+    attached_policies: [
+        "arn:aws:iam::aws:policy/aws-service-role/AWSElasticBeanstalkServiceRolePolicy",
+    ],
+    assume_role_policy_document: {
+        "Statement": [
+            {
+                "Action": "sts:AssumeRole",
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "elasticbeanstalk.amazonaws.com",
+                },
+            },
+        ],
+        "Version": "2012-10-17",
+    },
+    tags: {
+        "assume": "ebs",
+    },
+)

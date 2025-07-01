@@ -1,7 +1,7 @@
 TargetGroup(
     protocol: "HTTP",
-    port: None,
-    vpc_id: None,
+    port: 8080,
+    vpc_id: "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs.ron[vpc_id]",
     target_type: "ip",
     health_check: None,
     // health_check: HealthCheck(

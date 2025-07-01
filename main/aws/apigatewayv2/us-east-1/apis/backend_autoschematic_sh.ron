@@ -1,0 +1,6 @@
+Api(
+    name: "[api_name]",
+    protocol_type: "HTTP",
+    api_endpoint: "",
+    tags: None,
+)

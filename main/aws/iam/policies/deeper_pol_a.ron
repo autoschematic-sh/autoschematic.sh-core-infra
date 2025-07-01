@@ -1,0 +1,25 @@
+IamPolicy(
+    policy_document: {
+        "Statement": [
+            {
+                "Action": [
+                    "ecr:DeleteRegistryPolicy",
+                    "ecr:PutReplicationConfiguration",
+                ],
+                "Effect": "Allow",
+                "Resource": "*",
+                "Sid": "VisualEditor0",
+            },
+            {
+                "Action": "*",
+                "Effect": "Allow",
+                "Resource": "arn:aws:ecr:*:467992565187:repository/neftube2",
+                "Sid": "VisualEditor1",
+            },
+        ],
+        "Version": "2012-10-17",
+    },
+    tags: {
+        "neftube": "20",
+    },
+)

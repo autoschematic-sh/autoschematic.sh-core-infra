@@ -1,0 +1,38 @@
+IamPolicy(
+    policy_document: {
+        "Statement": [
+            {
+                "Action": [
+                    "ecr:GetAuthorizationToken",
+                    "ecr:BatchCheckLayerAvailability",
+                    "ecr:InitiateLayerUpload",
+                    "ecr:UploadLayerPart",
+                    "ecr:CompleteLayerUpload",
+                    "ecr:PutImage",
+                    "ecr:BatchGetImage",
+                    "ecr:BatchImportUpstreamImage",
+                    "ecr:GetDownloadUrlForLayer",
+                    "ecr:GetImageCopyStatus",
+                ],
+                "Effect": "Allow",
+                "Resource": "*",
+                "Sid": "ECR",
+            },
+            {
+                "Action": [
+                    "secretsmanager:GetSecretValue",
+                ],
+                "Condition": {
+                    "StringEquals": {
+                        "aws:ResourceAccount": "467992565187",
+                    },
+                },
+                "Effect": "Allow",
+                "Resource": "arn:aws:secretsmanager:*:*:secret:ecr-pullthroughcache/*",
+                "Sid": "SecretsManager",
+            },
+        ],
+        "Version": "2012-10-17",
+    },
+    tags: {},
+)

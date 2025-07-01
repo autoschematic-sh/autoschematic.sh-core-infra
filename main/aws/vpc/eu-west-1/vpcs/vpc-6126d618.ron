@@ -1,8 +1,0 @@
-Vpc(
-    cidr_block: "172.31.0.0/16",
-    instance_tenancy: "default",
-    enable_dns_support: true,
-    dhcp_options_id: "dopt-e98fac8f",
-    enable_dns_hostnames: true,
-    tags: {},
-)
