@@ -1,0 +1,21 @@
+Listener(
+    load_balancer_arn: "out://aws/elb/us-east-1/load_balancers/backend-autoschematic-sh.ron[load_balancer_arn]",
+    port: 443,
+    protocol: "HTTPS",
+    ssl_policy: "ELBSecurityPolicy-TLS-1-2-2017-01",
+    certificates: [
+        Certificate(
+            certificate_arn: "arn:aws:acm:us-east-1:467992565187:certificate/7d83a2b3-8304-41af-aa48-d29232b68269",
+            is_default: true,
+        ),
+    ],
+    default_actions: [
+        Action(
+            action_type: "forward",
+            target_group_arn: "out://aws/elb/us-east-1/target_groups/backend-autoschematic-sh.ron[target_group_arn]",
+            redirect_config: None,
+            fixed_response_config: None,
+        ),
+    ],
+    tags: {},
+)

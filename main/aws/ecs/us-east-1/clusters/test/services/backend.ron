@@ -25,15 +25,18 @@ Service(
             assign_public_ip: "ENABLED",
         ),
     ),
-    placement_constraints: [],
     placement_strategy: [],
+    placement_constraints: [],
+    
+    // some other great thing!
+    // test this as well
     load_balancers: [
-        // LoadBalancer(
-        //     target_group_arn: "arn:aws:elasticloadbalancing:[region]:[account_id]:targetgroup/[target-group-name]/[target-group-id]",
-        //     load_balancer_name: None,
-        //     container_name: "web",
-        //     container_port: 80,
-        // ),
+        LoadBalancer(
+            target_group_arn: "out://aws/elb/us-east-1/target_groups/backend-autoschematic-sh.ron[target_group_arn]",
+            // load_balancer_name: "backend-autoschematic-sh",
+            container_name: "backend",
+            container_port: 8080,
+        ),
     ],
     service_registries: [],
     scheduling_strategy: "REPLICA",

@@ -1,0 +1,14 @@
+LoadBalancer(
+    load_balancer_type: "application",
+    scheme: "internet-facing",
+    vpc_id: "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs.ron[vpc_id]",
+    security_groups: [
+        "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs/security_groups/default.ron[security_group_id]",
+    ],
+    subnets: [
+        "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs/subnets/alpha.ron[subnet_id]",
+        "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs/subnets/beta.ron[subnet_id]",
+    ],
+    ip_address_type: "ipv4",
+    tags: {},
+)

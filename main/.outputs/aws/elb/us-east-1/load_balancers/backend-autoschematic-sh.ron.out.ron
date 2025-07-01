@@ -1,0 +1,5 @@
+OutputMap({
+    "dns_name": "backend-autoschematic-sh-1748623466.us-east-1.elb.amazonaws.com",
+    "load_balancer_name": "backend-autoschematic-sh",
+    "load_balancer_arn": "arn:aws:elasticloadbalancing:us-east-1:467992565187:loadbalancer/app/backend-autoschematic-sh/b023f7f254a43b21",
+})
