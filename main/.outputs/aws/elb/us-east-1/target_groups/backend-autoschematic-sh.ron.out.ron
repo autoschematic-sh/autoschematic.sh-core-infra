@@ -1,0 +1,4 @@
+OutputMap({
+    "target_group_name": "backend-autoschematic-sh",
+    "target_group_arn": "arn:aws:elasticloadbalancing:us-east-1:467992565187:targetgroup/backend-autoschematic-sh/d3cd8708ca2fc6d3",
+})

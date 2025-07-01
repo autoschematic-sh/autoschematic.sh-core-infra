@@ -1,0 +1,20 @@
+TargetGroup(
+    protocol: "HTTP",
+    port: None,
+    vpc_id: None,
+    target_type: "ip",
+    health_check: None,
+    // health_check: HealthCheck(
+    //     enabled: true,
+    //     protocol: "HTTP",
+    //     port: "traffic-port",
+    //     path: "/health",
+    //     interval_seconds: 30,
+    //     timeout_seconds: 5,
+    //     healthy_threshold_count: 2,
+    //     unhealthy_threshold_count: 5,
+    // ),
+    targets: [
+    ],
+    tags: {},
+)
