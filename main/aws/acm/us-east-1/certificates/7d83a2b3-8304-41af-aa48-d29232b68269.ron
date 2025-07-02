@@ -1,0 +1,20 @@
+AcmCertificate(
+    domain_name: "autoschematic.sh",
+    subject_alternative_names: [
+        "autoschematic.sh",
+        "backend.autoschematic.sh",
+    ],
+    validation_method: "DNS",
+    validation_options: [
+        ValidationOption(
+            domain_name: "autoschematic.sh",
+            validation_domain: "autoschematic.sh",
+        ),
+        ValidationOption(
+            domain_name: "backend.autoschematic.sh",
+            validation_domain: "backend.autoschematic.sh",
+        ),
+    ],
+    certificate_transparency_logging_preference: "ENABLED",
+    tags: {},
+)

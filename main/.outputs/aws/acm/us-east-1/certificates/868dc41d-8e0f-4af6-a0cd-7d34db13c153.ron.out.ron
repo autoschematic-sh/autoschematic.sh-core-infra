@@ -1,0 +1,5 @@
+OutputMap({
+    "certificate_domain": "psychlone.xyz",
+    "certificate_id": "868dc41d-8e0f-4af6-a0cd-7d34db13c153",
+    "certificate_arn": "arn:aws:acm:us-east-1:467992565187:certificate/868dc41d-8e0f-4af6-a0cd-7d34db13c153",
+})

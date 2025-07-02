@@ -1,0 +1,5 @@
+OutputMap({
+    "certificate_domain": "hanzipalace.com",
+    "certificate_arn": "arn:aws:acm:us-east-1:467992565187:certificate/c027e865-9da1-4037-94af-f15aec582c15",
+    "certificate_id": "c027e865-9da1-4037-94af-f15aec582c15",
+})

@@ -1,0 +1,5 @@
+OutputMap({
+    "certificate_domain": "neftu.be",
+    "certificate_arn": "arn:aws:acm:eu-west-2:467992565187:certificate/db2c6f3b-b8ba-4642-9c0e-316d46bc8e30",
+    "certificate_id": "db2c6f3b-b8ba-4642-9c0e-316d46bc8e30",
+})

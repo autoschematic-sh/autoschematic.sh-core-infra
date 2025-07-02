@@ -1,0 +1,15 @@
+AcmCertificate(
+    domain_name: "hanzipalace.com",
+    subject_alternative_names: [
+        "hanzipalace.com",
+    ],
+    validation_method: "DNS",
+    validation_options: [
+        ValidationOption(
+            domain_name: "hanzipalace.com",
+            validation_domain: "hanzipalace.com",
+        ),
+    ],
+    certificate_transparency_logging_preference: "ENABLED",
+    tags: {},
+)
