@@ -10,5 +10,7 @@ LoadBalancer(
         "out://aws/vpc/us-east-1/vpcs/autoschematic-ecs/subnets/alpha.ron[subnet_id]",
     ],
     ip_address_type: "ipv4",
-    tags: {},
+    tags: {
+        
+    },
 )
