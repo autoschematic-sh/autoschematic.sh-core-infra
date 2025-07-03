@@ -1,0 +1,8 @@
+LogGroup(
+    retention_policy: RetentionPolicy(
+        retention_in_days: 14,
+    ),
+    kms_key_id: None,
+    metric_filters: None,
+    tags: {},
+)
