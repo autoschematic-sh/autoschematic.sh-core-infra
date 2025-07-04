@@ -1,5 +1,8 @@
 IamRole(
-    attached_policies: ["arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"],
+    attached_policies: [
+        "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy",
+        "arn:aws:iam::467992565187:policy/autoschematic-backend-ecs-secret"
+    ],
     assume_role_policy_document: {
         "Statement": [
             {
