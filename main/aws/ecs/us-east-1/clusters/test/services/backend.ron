@@ -28,12 +28,9 @@ Service(
     placement_strategy: [],
     placement_constraints: [],
     
-    // some other great thing!
-    // test this as well
     load_balancers: [
         LoadBalancer(
             target_group_arn: "out://aws/elb/us-east-1/target_groups/backend-autoschematic-sh.ron[target_group_arn]",
-            // load_balancer_name: "backend-autoschematic-sh",
             container_name: "backend",
             container_port: 8080,
         ),
