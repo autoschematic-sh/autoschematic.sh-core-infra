@@ -21,24 +21,37 @@ TaskDefinition(
             entry_point: [],
             command: [],
             environment: [
-                KeyValuePair(
-                    name: "GITHUB_OAUTH_CLIENT_ID",
-                    value: "blank",
-                ),
-                KeyValuePair(
-                    name: "GITHUB_OAUTH_SECRET",
-                    value: "blank",
-                ),
-                KeyValuePair(
-                    name: "SESSION_SECRET",
-                    value: "blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaank",
-                ),
+                // KeyValuePair(
+                //     name: "GITHUB_OAUTH_CLIENT_ID",
+                //     value: "blank",
+                // ),
+                // KeyValuePair(
+                //     name: "GITHUB_OAUTH_SECRET",
+                //     value: "blank",
+                // ),
+                // KeyValuePair(
+                //     name: "SESSION_SECRET",
+                //     value: "blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaank",
+                // ),
             ],
             environment_files: [],
             mount_points: [],
             volumes_from: [],
             linux_parameters: None,
-            secrets: [],
+            secrets: [
+                Secret(
+                    name: "GITHUB_OAUTH_CLIENT_ID",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:GITHUB_OAUTH_CLIENT_ID::"
+                ),
+                Secret(
+                    name: "GITHUB_OAUTH_SECRET",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:GITHUB_OAUTH_SECRET::"
+                ),
+                Secret(
+                    name: "SESSION_SECRET",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:SESSION_SECRET::"
+                ),
+            ],
             depends_on: [],
             start_timeout: None,
             stop_timeout: None,
