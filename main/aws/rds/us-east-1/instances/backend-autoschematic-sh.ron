@@ -1,0 +1,15 @@
+RdsDBInstance(
+    engine: "postgres",
+    instance_class: "db.t3.micro",
+    allocated_storage: 20,
+    master_username: "[master_username]",
+    port: 5432,
+    publicly_accessible: false,
+    storage_type: "gp2",
+    backup_retention_period: 7,
+    preferred_backup_window: "03:00-04:00",
+    preferred_maintenance_window: "sun:04:00-sun:05:00",
+    multi_az: false,
+    storage_encrypted: true,
+    tags: {},
+)
