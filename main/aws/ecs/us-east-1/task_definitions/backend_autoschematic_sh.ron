@@ -5,7 +5,7 @@ TaskDefinition(
     container_definitions: [
         ContainerDefinition(
             name: "backend",
-            image: "467992565187.dkr.ecr.ap-southeast-2.amazonaws.com/backend.autoschematic.sh:0.2.0",
+            image: "467992565187.dkr.ecr.ap-southeast-2.amazonaws.com/backend.autoschematic.sh:0.3.1",
             cpu: 256,
             memory: 512,
             memory_reservation: None,
@@ -21,17 +21,45 @@ TaskDefinition(
             entry_point: [],
             command: [],
             environment: [
-                // KeyValuePair(
-                //     name: "GITHUB_OAUTH_CLIENT_ID",
-                //     value: "blank",
+                KeyValuePair(
+                    name: "DATABASE_AUTH_MODE",
+                    value: "IAM",
+                ),
+                KeyValuePair(
+                    name: "DATABASE_NAME",
+                    value: "autoschematic"
+                ),
+                KeyValuePair(
+                    name: "DATABASE_USERNAME",
+                    value: "autoschematic"
+                ),
+                KeyValuePair(
+                    name: "DATABASE_HOSTNAME",
+                    value: "out://aws/rds/us-east-1/instances/backend-autoschematic-sh.ron[endpoint]"
+                ),
+                KeyValuePair(
+                    name: "DATABASE_PORT",
+                    value: "5432",
+                ),
+                KeyValuePair(
+                    name: "DATABASE_MAX_CONNS",
+                    value: "1000",
+                ),
+                KeyValuePair(
+                    name: "FRONTEND_URL",
+                    value: "https://autoschematic.sh",
+                ),
+                KeyValuePair(
+                    name: "GITHUB_OAUTH_REDIRECT_URL",
+                    value: "https://backend.autoschematic.sh/api/auth/oauth/callback",
+                ),
+                // KeyValuePair(blank
+                    //     name: "GITHUB_OAUTH_SECRET",
+                    //     value: "blank",
                 // ),
                 // KeyValuePair(
-                //     name: "GITHUB_OAUTH_SECRET",
-                //     value: "blank",
-                // ),
-                // KeyValuePair(
-                //     name: "SESSION_SECRET",
-                //     value: "blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaank",
+                    //     name: "SESSION_SECRET",
+                    //     value: "blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaank",
                 // ),
             ],
             environment_files: [],
@@ -71,10 +99,10 @@ TaskDefinition(
             ulimits: [],
             log_configuration: None,
             // log_configuration: LogConfiguration(
-            //     log_driver: "",
-            //     options: {
-            //     },
-            //     secret_options: []
+                //     log_driver: "",
+                //     options: {
+                //     },
+                //     secret_options: []
             // ),
             health_check: None,
             system_controls: [],
