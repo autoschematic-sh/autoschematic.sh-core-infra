@@ -1,5 +1,1 @@
-OutputMap({
-    "certificate_arn": "arn:aws:acm:us-east-1:467992565187:certificate/7d83a2b3-8304-41af-aa48-d29232b68269",
-    "certificate_domain": "autoschematic.sh",
-    "certificate_id": "7d83a2b3-8304-41af-aa48-d29232b68269",
-})
+PointerToVirtual("aws/acm/us-east-1/certificates/autoschematic.sh.ron")

@@ -1,0 +1,5 @@
+RdsDBParameterGroup(
+    description: "Default parameter group for postgres17",
+    family: "postgres17",
+    parameters: {},
+)

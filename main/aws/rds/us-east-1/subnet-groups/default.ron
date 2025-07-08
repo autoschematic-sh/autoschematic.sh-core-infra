@@ -1,0 +1,11 @@
+RdsDBSubnetGroup(
+    description: "default",
+    subnet_ids: [
+        "subnet-8e06d7b0",
+        "subnet-789dc032",
+        "subnet-055a1d0a",
+        "subnet-4f8a0728",
+        "subnet-28971f06",
+        "subnet-01be305d",
+    ],
+)
