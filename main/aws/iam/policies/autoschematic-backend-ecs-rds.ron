@@ -8,7 +8,9 @@ IamPolicy(
                     "rds-db:connect"
                 ],
                 "Resource": [
-                    "out://aws/rds/us-east-1/instances/backend-autoschematic-sh.ron[db_instance_arn]"
+                    "out://aws/rds/us-east-1/instances/backend-autoschematic-sh.ron[db_instance_arn]",
+                    "arn:aws:rds-db:us-east-1:467992565187:dbuser:backend-autoschematic-sh/backend_autoschematic",
+                    "arn:aws:rds-db:us-east-1:467992565187:dbuser:db-S4FD3W5SF4KCKZKLHNQL2CYUVM/backend_autoschematic"
                 ]
             }
         ]
