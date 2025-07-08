@@ -97,13 +97,16 @@ TaskDefinition(
             pseudo_terminal: None,
             docker_labels: {},
             ulimits: [],
-            log_configuration: None,
-            // log_configuration: LogConfiguration(
-                //     log_driver: "",
-                //     options: {
-                //     },
-                //     secret_options: []
-            // ),
+            // log_configuration: None,
+            log_configuration: LogConfiguration(
+                    log_driver: "awslogs",
+                    options: {
+                        "awslogs-group": "/ecs/backend_autoschematic_sh",
+                        "awslogs-region": "us-east-1",
+                        "awslogs-stream-prefix": "backend"
+                    },
+                    secret_options: []
+            ),
             health_check: None,
             system_controls: [],
             resource_requirements: [],
