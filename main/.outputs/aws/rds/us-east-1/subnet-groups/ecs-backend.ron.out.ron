@@ -1,0 +1,4 @@
+OutputMap({
+    "db_subnet_group_arn": "arn:aws:rds:us-east-1:467992565187:subgrp:ecs-backend",
+    "db_subnet_group_name": "ecs-backend",
+})
