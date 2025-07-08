@@ -1,5 +1,5 @@
 OutputMap({
     "db_instance_identifier": "backend-autoschematic-sh",
     "db_instance_arn": "arn:aws:rds:us-east-1:467992565187:db:backend-autoschematic-sh",
-    "endpoint": "pending",
+    "endpoint": "backend-autoschematic-sh.cy3mg2qaogm0.us-east-1.rds.amazonaws.com",
 })
