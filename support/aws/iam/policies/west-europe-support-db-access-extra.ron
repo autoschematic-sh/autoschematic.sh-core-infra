@@ -1,0 +1,17 @@
+IamPolicy(
+    policy_document: {
+        "Statement": [
+            {
+                "Action": [
+                    "rds-db:connect",
+                ],
+                "Effect": "Allow",
+                "Resource": [
+                    "arn:aws:rds:eu-west-3:1234567890:db:customerdb-eu-west-*",
+                ],
+            },
+        ],
+        "Version": "2012-10-17",
+    },
+    tags: {},
+)
