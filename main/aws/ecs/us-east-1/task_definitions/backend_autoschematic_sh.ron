@@ -31,7 +31,7 @@ TaskDefinition(
                 ),
                 KeyValuePair(
                     name: "DATABASE_USERNAME",
-                    value: "autoschematic"
+                    value: "backend_autoschematic"
                 ),
                 KeyValuePair(
                     name: "DATABASE_HOSTNAME",
@@ -53,14 +53,6 @@ TaskDefinition(
                     name: "GITHUB_OAUTH_REDIRECT_URL",
                     value: "https://backend.autoschematic.sh/api/auth/oauth/callback",
                 ),
-                // KeyValuePair(blank
-                    //     name: "GITHUB_OAUTH_SECRET",
-                    //     value: "blank",
-                // ),
-                // KeyValuePair(
-                    //     name: "SESSION_SECRET",
-                    //     value: "blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaank",
-                // ),
             ],
             environment_files: [],
             mount_points: [],
@@ -125,3 +117,4 @@ TaskDefinition(
     proxy_configuration: None,
     runtime_platform: None,
 )
+

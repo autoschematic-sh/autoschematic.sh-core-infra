@@ -1,6 +1,7 @@
 AutoschematicConfig(
     prefixes: {
         "main": Prefix(
+            resource_group: "main",
             connectors: [
                 Connector(
                     shortname: "aws/iam",
@@ -96,5 +97,17 @@ AutoschematicConfig(
                 )
             ]
         ),
+        "support": Prefix(
+            resource_group: "main",
+            connectors: [
+                Connector(
+                    shortname: "aws/iam",
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-iam",
+                        version: "0.6.1"
+                    )
+                ),
+            ]
+        )
     },
 )
