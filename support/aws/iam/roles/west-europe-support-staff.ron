@@ -1,12 +1,12 @@
 IamRole(
     attached_policies: [
         "arn:aws:iam::467992565187:policy/west-europe-support-db-access",
+        "arn:aws:iam::467992565187:policy/west-europe-support-db-access-extra",
     ],
     assume_role_policy_document: {
         "Statement": [
             {
                 "Action": "sts:AssumeRole",
-
                 "Effect": "Allow",
                 "Principal": {
                     "AWS": "arn:aws:iam::467992565187:root",
@@ -15,5 +15,7 @@ IamRole(
         ],
         "Version": "2012-10-17",
     },
-    tags: {},
+    tags: {
+        "team": "west-europe-support"
+    },
 )
