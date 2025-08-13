@@ -5,7 +5,7 @@ TaskDefinition(
     container_definitions: [
         ContainerDefinition(
             name: "backend",
-            image: "467992565187.dkr.ecr.ap-southeast-2.amazonaws.com/backend.autoschematic.sh:0.3.1",
+            image: "467992565187.dkr.ecr.ap-southeast-2.amazonaws.com/backend.autoschematic.sh:0.4.0",
             cpu: 256,
             memory: 512,
             memory_reservation: None,
@@ -70,6 +70,10 @@ TaskDefinition(
                 Secret(
                     name: "SESSION_SECRET",
                     value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:SESSION_SECRET::"
+                ),
+                Secret(
+                    name: "ADMIN_USERNAME",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:ADMIN_USERNAME::"
                 ),
             ],
             depends_on: [],
