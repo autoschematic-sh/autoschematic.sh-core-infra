@@ -1,0 +1,4 @@
+OutputMap({
+    "repository_uri": "467992565187.dkr.ecr.us-east-1.amazonaws.com/autoschematic-server",
+    "repository_name": "autoschematic-server",
+})
