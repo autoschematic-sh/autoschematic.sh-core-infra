@@ -1,0 +1,21 @@
+IamRole(
+    attached_policies: [
+        "arn:aws:iam::1234567890:policy/west-europe-support-db-access",
+        // "out://aws/iam/policies/west-europe-aux-db-access.ron[arn]"
+    ],
+    assume_role_policy_document: {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": "sts:AssumeRole",
+                "Principal": {
+                    "AWS": [
+                      "arn:aws:iam::1234567890:role/aws-reserved/sso.amazonaws.com/WestEuropeSupport"
+                    ]
+                },
+            },
+        ],
+    },
+    tags: {},
+)

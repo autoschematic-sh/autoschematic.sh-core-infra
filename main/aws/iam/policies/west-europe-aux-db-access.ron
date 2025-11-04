@@ -1,0 +1,21 @@
+IamPolicy(
+    policy_document: {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "rds-db:connect"
+                ],
+                "Resource": [
+                    "out://aws/rds/us-east-1/instances/backend-autoschematic-sh.ron[db_instance_arn]",
+                    "arn:aws:rds-db:us-east-1:467992565187:dbuser:backend-autoschematic-sh/backend_autoschematic",
+                    "arn:aws:rds-db:us-east-1:467992565187:dbuser:db-S4FD3W5SF4KCKZKLHNQL2CYUVM/backend_autoschematic"
+                ]
+            }
+        ]
+    },
+    tags: {
+    },
+)
+
