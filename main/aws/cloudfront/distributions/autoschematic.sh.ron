@@ -4,7 +4,7 @@ Distribution(
     origins: [
         Origin(
             id: "S3-autoschematic.sh",
-            domain_name: "autoschematic.sh.s3.ap-southeast-2.amazonaws.com",
+            domain_name: "autoschematic.sh.s3.us-east-1.amazonaws.com",
             origin_path: "",
             custom_origin_config: None,
             s3_origin_config: S3OriginConfig(
