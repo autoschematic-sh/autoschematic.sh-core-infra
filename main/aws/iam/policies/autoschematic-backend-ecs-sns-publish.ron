@@ -1,0 +1,18 @@
+IamPolicy(
+    policy_document: {
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "sns:Publish",
+                ],
+                "Resource": [
+                    "arn:aws:sns:us-east-1:467992565187:autoschematic-waitlist"
+                ]
+            }
+        ],
+        "Version": "2012-10-17",
+    },
+    tags: {
+    },
+)

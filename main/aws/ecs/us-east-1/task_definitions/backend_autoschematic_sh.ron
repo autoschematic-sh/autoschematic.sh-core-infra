@@ -5,7 +5,7 @@ TaskDefinition(
     container_definitions: [
         ContainerDefinition(
             name: "backend",
-            image: "467992565187.dkr.ecr.ap-southeast-2.amazonaws.com/backend.autoschematic.sh:0.4.0",
+            image: "467992565187.dkr.ecr.us-east-1.amazonaws.com/backend.autoschematic.sh:0.4.0",
             cpu: 256,
             memory: 512,
             memory_reservation: None,
@@ -52,6 +52,10 @@ TaskDefinition(
                 KeyValuePair(
                     name: "GITHUB_OAUTH_REDIRECT_URL",
                     value: "https://backend.autoschematic.sh/api/auth/oauth/callback",
+                ),
+                KeyValuePair(
+                    name: "CLUSTER_REQUEST_SNS_TOPIC_ARN",
+                    value: "arn:aws:sns:us-east-1:467992565187:autoschematic-waitlist"
                 ),
             ],
             environment_files: [],
