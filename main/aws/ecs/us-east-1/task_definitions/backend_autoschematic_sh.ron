@@ -79,6 +79,18 @@ TaskDefinition(
                     name: "ADMIN_USERNAME",
                     value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:ADMIN_USERNAME::"
                 ),
+                Secret(
+                    name: "STRIPE_SECRET_KEY",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:STRIPE_SECRET_KEY::"
+                ),
+                Secret(
+                    name: "STRIPE_PUBLISHABLE_KEY",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:STRIPE_PUBLISHABLE_KEY::"
+                ),
+                Secret(
+                    name: "STRIPE_WEBHOOK_SECRET",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:STRIPE_WEBHOOK_SECRET::"
+                ),
             ],
             depends_on: [],
             start_timeout: None,
