@@ -2,7 +2,10 @@ S3Bucket(
     policy: {
         "Statement": [
             {
-                "Action": "s3:GetObject",
+                "Action": [
+                    "s3:GetObject",
+                    "s3:GetObjectVersion",
+                ],
                 "Condition": {
                     "StringEquals": {
                         "AWS:SourceArn": "arn:aws:cloudfront::467992565187:distribution/E2YK23069K7O4B",
