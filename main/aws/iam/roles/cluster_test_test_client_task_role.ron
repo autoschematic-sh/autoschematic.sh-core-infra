@@ -1,6 +1,7 @@
 IamRole(
     attached_policies: [
-        "arn:aws:iam::467992565187:policy/autoschematic-backend-ecs-rds"
+        "arn:aws:iam::467992565187:policy/autoschematic-backend-ecs-rds",
+        "arn:aws:iam::467992565187:policy/autoschematic-backend-ecs-sns-publish"
     ],
     assume_role_policy_document: {
         "Statement": [
