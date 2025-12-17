@@ -1,5 +1,5 @@
 Service(
-    task_definition: "arn:aws:ecs:us-east-1:467992565187:task-definition/backend_autoschematic_sh:11",
+    task_definition: "arn:aws:ecs:us-east-1:467992565187:task-definition/backend_autoschematic_sh:13",
     desired_count: 1,
     launch_type: "FARGATE",
     capacity_provider_strategy: [],
