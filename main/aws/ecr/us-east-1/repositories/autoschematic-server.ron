@@ -3,7 +3,7 @@ Repository(
         encryption_type: "AES256",
         kms_key: None,
     ),
-    image_tag_mutability: "IMMUTABLE",
+    image_tag_mutability: "MUTABLE",
     image_scanning_configuration: ImageScanningConfiguration(
         scan_on_push: true,
     ),
