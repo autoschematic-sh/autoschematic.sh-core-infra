@@ -38,6 +38,6 @@ Distribution(
     ),
     cache_behaviors: [],
     comment: "",
-    price_class: "PriceClass_100",
+    price_class: "PriceClass_All",
     tags: {},
 )

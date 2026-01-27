@@ -15,7 +15,10 @@ AutoschematicConfig(
                     spec: Cargo(
                         name: "autoschematic-connector-aws-ecs",
                         version: "0.11.0"
-                    )
+                    ),
+                    env: {
+                        // "RUST_LOG": "info"
+                    }
                 ),
                 Connector(
                     shortname: "aws/route53",
@@ -24,91 +27,34 @@ AutoschematicConfig(
                         version: "0.11.0"
                     )
                 ),
-                // Connector(
-                //     shortname: "aws/vpc",
-                //     spec: Cargo(
-                //         name: "autoschematic-connector-aws-vpc",
-                //         version: "0.7.0"
-                //     )
-                // ),
-                // Connector(
-                //     shortname: "aws/s3",
-                //     spec: Cargo(
-                //         name: "autoschematic-connector-aws-s3",
-                //         version: "0.7.0"
-                //     )
-                // ),
-                // Connector(
-                //     shortname: "aws/elb",
-                //     spec: Cargo(
-                //         name: "autoschematic-connector-aws-elb",
-                //         version: "0.7.0"
-                //     )
-                // ),
-                // Connector(
-                //     shortname: "aws/rds",
-                //     spec: Cargo(
-                //         name: "autoschematic-connector-aws-rds",
-                //         version: "0.7.0"
-                //     )
-                // ),
-                // Connector(
-                //     shortname: "aws/ecs",
-                //     spec: Cargo(
-                //         name: "autoschematic-connector-aws-ecs",
-                //         version: "0.7.0"
-                //     )
-                // ),
-                // // Connector(
-                //     //     shortname: "aws/acm",
-                //     //     spec: CargoLocal(
-                //         //         path: "../connector-dev/autoschematic-connector-aws/acm"
-                //     //     )
-                // // ),
-                // Connector(
-                //     shortname: "aws/secretsmanager",
-                //     spec: Cargo(
-                //         name: "autoschematic-connector-aws-secretsmanager",
-                //         version: "0.7.0"
-                //     )
-                // ),
-                // Connector(
-                //     shortname: "aws/ecr",
-                //     spec: Cargo(
-                //         name: "autoschematic-connector-aws-ecr",
-                //         version: "0.7.0"
-                //     )
-                // ),
-                // Connector(
-                //     shortname: "aws/route53",
-                //     spec: Cargo(
-                //         name: "autoschematic-connector-aws-route53",
-                //         version: "0.7.0"
-                //     )
-                // ),
-                // Connector(
-                //     shortname: "aws/cloudfront",
-                //     spec: Cargo(
-                //         name: "autoschematic-connector-aws-cloudfront",
-                //         version: "0.7.0"
-                //     ),
-                //     env: {
-                //     }
-                // ),
-                // Connector(
-                //     shortname: "aws/cloudwatch",
-                //     spec: Cargo(
-                //         name: "autoschematic-connector-aws-cloudwatch",
-                //         version: "0.7.0"
-                //     )
-                // ),
-                // Connector(
-                //     shortname: "aws/apigatewayv2",
-                //     spec: Cargo(
-                //         name: "autoschematic-connector-aws-apigatewayv2",
-                //         version: "0.7.0"
-                //     )
-                // )
+                Connector(
+                    shortname: "aws/vpc",
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-vpc",
+                        version: "0.11.0"
+                    )
+                ),
+                Connector(
+                    shortname: "aws/cloudfront",
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-cloudfront",
+                        version: "0.11.0"
+                    )
+                ),
+                Connector(
+                    shortname: "aws/s3",
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-s3",
+                        version: "0.11.0"
+                    )
+                ),
+                Connector(
+                    shortname: "aws/ecr",
+                    spec: Cargo(
+                        name: "autoschematic-connector-aws-ecr",
+                        version: "0.11.0"
+                    ),
+                ),
             ]
         ),
     },

@@ -1,0 +1,138 @@
+TaskDefinition(
+    task_role_arn: "arn:aws:iam::467992565187:role/cluster_test_test_client_task_role",
+    execution_role_arn: "arn:aws:iam::467992565187:role/cluster_test_execution_role",
+    network_mode: "awsvpc",
+    container_definitions: [
+        ContainerDefinition(
+            name: "backend",
+            image: "467992565187.dkr.ecr.us-east-1.amazonaws.com/backend.autoschematic.sh:0.4.0",
+            cpu: 256,
+            memory: 512,
+            memory_reservation: None,
+            links: [],
+            port_mappings: [
+                PortMapping(
+                    container_port: 8080,
+                    host_port: 8080,
+                    protocol: "tcp",
+                ),
+            ],
+            essential: true,
+            entry_point: [],
+            command: [],
+            environment: [
+                KeyValuePair(
+                    name: "DATABASE_HOSTNAME",
+                    value: "backend-autoschematic-sh.cy3mg2qaogm0.us-east-1.rds.amazonaws.com",
+                ),
+                KeyValuePair(
+                    name: "DATABASE_NAME",
+                    value: "autoschematic",
+                ),
+                KeyValuePair(
+                    name: "DATABASE_MAX_CONNS",
+                    value: "1000",
+                ),
+                KeyValuePair(
+                    name: "DATABASE_PORT",
+                    value: "5432",
+                ),
+                KeyValuePair(
+                    name: "DATABASE_AUTH_MODE",
+                    value: "IAM",
+                ),
+                KeyValuePair(
+                    name: "DATABASE_USERNAME",
+                    value: "backend_autoschematic",
+                ),
+                KeyValuePair(
+                    name: "GITHUB_OAUTH_REDIRECT_URL",
+                    value: "https://backend.autoschematic.sh/api/auth/oauth/callback",
+                ),
+                KeyValuePair(
+                    name: "CLUSTER_REQUEST_SNS_TOPIC_ARN",
+                    value: "arn:aws:sns:us-east-1:467992565187:autoschematic-waitlist",
+                ),
+                KeyValuePair(
+                    name: "FRONTEND_URL",
+                    value: "https://autoschematic.sh",
+                ),
+            ],
+            environment_files: [],
+            mount_points: [],
+            volumes_from: [],
+            linux_parameters: None,
+            secrets: [
+                Secret(
+                    name: "GITHUB_OAUTH_CLIENT_ID",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:GITHUB_OAUTH_CLIENT_ID::",
+                ),
+                Secret(
+                    name: "GITHUB_OAUTH_SECRET",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:GITHUB_OAUTH_SECRET::",
+                ),
+                Secret(
+                    name: "SESSION_SECRET",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:SESSION_SECRET::",
+                ),
+                Secret(
+                    name: "ADMIN_USERNAME",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:ADMIN_USERNAME::",
+                ),
+                Secret(
+                    name: "STRIPE_SECRET_KEY",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:STRIPE_SECRET_KEY::",
+                ),
+                Secret(
+                    name: "STRIPE_PUBLISHABLE_KEY",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:STRIPE_PUBLISHABLE_KEY::",
+                ),
+                Secret(
+                    name: "STRIPE_WEBHOOK_SECRET",
+                    value_from: "arn:aws:secretsmanager:us-east-1:467992565187:secret:ecs/backend.autoschematic.sh-O1o5Un:STRIPE_WEBHOOK_SECRET::",
+                ),
+            ],
+            depends_on: [],
+            start_timeout: None,
+            stop_timeout: None,
+            hostname: None,
+            user: None,
+            working_directory: None,
+            disable_networking: None,
+            privileged: None,
+            readonly_root_filesystem: None,
+            dns_servers: [],
+            dns_search_domains: [],
+            extra_hosts: [],
+            docker_security_options: [],
+            interactive: None,
+            pseudo_terminal: None,
+            docker_labels: {},
+            ulimits: [],
+            log_configuration: LogConfiguration(
+                log_driver: "awslogs",
+                options: {
+                    "awslogs-region": "us-east-1",
+                    "awslogs-group": "/ecs/backend_autoschematic_sh",
+                    "awslogs-stream-prefix": "backend",
+                },
+                secret_options: [],
+            ),
+            health_check: None,
+            system_controls: [],
+            resource_requirements: [],
+            firelens_configuration: None,
+        ),
+    ],
+    volumes: [],
+    placement_constraints: [],
+    requires_compatibilities: [
+        "FARGATE",
+    ],
+    cpu: "256",
+    memory: "512",
+    pid_mode: None,
+    ipc_mode: None,
+    proxy_configuration: None,
+    runtime_platform: None,
+)
